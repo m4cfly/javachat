@@ -7,9 +7,9 @@ public class ExtraClient
 {
     public static void main(String[] args)
     {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(8);
         System.out.println("Starting extra ChatClient");
-        Client client = new Client("127.0.0.1", 9090, executorService);
+        Client client = new Client("10.83.137.3", 9090, executorService);
         executorService.submit(client);
     }
 }
